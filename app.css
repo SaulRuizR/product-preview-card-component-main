@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz@9..144&display=swap');
+
+:root{
+    --darkcyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+    --fuentePal: 'Fraunces', serif;
+    --fuenteSec: 'Montserrat', serif;
+}
+body{
+    background-color: var(--cream);
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    margin: 0;
+}
+@media (min-width:375px){
+    .grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+.contenedor{
+    width: 350px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+@media (min-width:375px){
+    .contenedor{
+        width: 750px;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+}
+.imagen{
+    height: 300px;
+    background-image: url(/images/image-product-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1rem 1rem 0 0;
+}
+@media (min-width:375px){
+    .imagen{
+        border-radius: 1rem 0 0 1rem;
+        background-image: url(/images/image-product-desktop.jpg);
+        width: 375px;
+        height: 500px;
+    }
+}
+.informacion{
+    background-color: var(--White);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border-radius: 0 0 1rem 1rem;
+}
+@media (min-width:375px){
+    .informacion{
+        border-radius: 0 1rem 1rem o;
+    }
+}
+.nombre{
+    font-family: var(--fuentePal);
+    margin: 0;
+}
+.titulo{
+    font-family: var(--fuenteSec);
+    text-transform: uppercase;
+    color: var(--Darkgrayishblue);
+    margin: 0.5rem 0;
+}
+.texto{
+    font-family: var(--fuenteSec);
+    color: var(--Darkgrayishblue);
+    
+}
+.precio{
+    display: flex;
+    align-items: center;
+}
+.precio1{
+    color: var(--darkcyan);
+    margin: 1rem 2rem 1rem 0;
+    font-size: 2rem;
+    font-family: var(--fuentePal);
+    font-weight: bolder;
+}
+.precio2{
+    color: var(--Darkgrayishblue);
+}
+.boton{
+    background-color: var(--darkcyan);
+    text-align: center;
+    padding: 1rem;
+    color: var(--White);
+    border-radius: 0.5rem;
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--fuenteSec);
+    font-weight: bold;
+}
+.boton img{
+    margin-right: 1rem;
+}
